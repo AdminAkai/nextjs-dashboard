@@ -1,4 +1,4 @@
-import { CustomerField, InvoiceFormData } from '@/app/lib/definitions';
+import { CustomerField, InvoiceFormNames } from '@/app/lib/definitions';
 import Link from 'next/link';
 import {
   CheckIcon,
@@ -21,7 +21,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
           <div className='relative'>
             <select
               id='customer'
-              name={InvoiceFormData.CUSTOMER_ID}
+              name={InvoiceFormNames.CUSTOMER_ID}
               className='peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500'
               defaultValue=''
             >
@@ -47,7 +47,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
             <div className='relative'>
               <input
                 id='amount'
-                name={InvoiceFormData.AMOUNT}
+                name={InvoiceFormNames.AMOUNT}
                 type='number'
                 step='0.01'
                 placeholder='Enter USD amount'
@@ -68,7 +68,7 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
               <div className='flex items-center'>
                 <input
                   id='pending'
-                  name={InvoiceFormData.STATUS}
+                  name={InvoiceFormNames.STATUS}
                   type='radio'
                   value='pending'
                   className='h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2'

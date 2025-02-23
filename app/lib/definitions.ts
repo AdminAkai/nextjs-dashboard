@@ -87,7 +87,7 @@ export type InvoiceForm = {
   status: 'pending' | 'paid';
 };
 
-export enum InvoiceFormData {
+export enum InvoiceFormNames {
   CUSTOMER_ID = 'customerId',
   AMOUNT = 'amount',
   STATUS = 'status',
