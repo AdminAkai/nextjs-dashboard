@@ -58,6 +58,7 @@ export const createInvoice = async (
     `;
   } catch (err) {
     return {
+      error: err,
       message: 'Database Error: Failed to create invoice.',
     };
   }
@@ -90,6 +91,7 @@ export const updateInvoice = async (
     `;
   } catch (err) {
     return {
+      error: err,
       message: 'Database Error: Failed to update invoice.',
     };
   }
